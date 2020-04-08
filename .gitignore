@@ -1,0 +1,13 @@
+*.aux
+*.bbl
+*.blg
+*.gif
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.png
+*.snm
+*.synctex.gz*
+*.toc
