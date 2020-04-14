@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[frenchb]{babel}
 \usepackage{a4wide}
+\usepackage{caption}
 \usepackage{fontspec}
 \usepackage{newpxtext,newpxmath}
 
@@ -8,6 +9,13 @@
 \title{Conseils pour la rédaction d'une mémoire de licence en SIL}
 \author{Lionel K\textsc{itihoun}}
 \date{Version de mars 2020}
+
+% To change default table caption.
+\captionsetup[table]{name=Tableau}
+
+\setlength{\parskip}{0.7em}
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\intextsep}{1em}
 
 \begin{document}
 \maketitle
@@ -33,19 +41,19 @@ Le mémoire présente le travail effectué lors d'un projet. Il détaille les ob
 \section{Structuration du mémoire}
 
 \subsection{Introduction}
-l'introduction part d'un cadre général pour aboutir à la problématique abordée dans le mémoire. Il convient d'éviter les introductions commençant par \og L'informatique est la science du traitement rationnel et automatique de l'information \fg{} ou encore \og Il n'est plus à démontrer que toute entreprise a besoin de l'outil informatique pour un fonctionnement efficace \fg{}.
+L'introduction part d'un cadre général pour aboutir à la problématique abordée dans le mémoire. Il convient d'éviter les introductions commençant par \og L'informatique est la science du traitement rationnel et automatique de l'information \fg{} ou encore \og Il n'est plus à démontrer que toute entreprise a besoin de l'outil informatique pour un fonctionnement efficace \fg{}.
 
 L'introduction présente le sujet abordé dans le mémoire. \`A la fin de sa lecture, on doit avoir une idée du travail effectué et avoir envie ou non de continuer la lecture du document.
 
 \subsection{Première partie : présentation du maître d'\oe{}vre et du projet}
-Cette première partie contient généralement deux à trois chapitres. Un premier chapitre présent le maître d'\oe{}uvre, c-à-d la structure bénéficiaire du projet. Vous aurez à parler des activités de la structure, de son organisation décrire et des ses ambitions.
+Cette première partie contient généralement deux à trois chapitres. Un premier chapitre présent le maître d'\oe{}uvre, c-à-d la structure bénéficiaire du projet. Vous aurez à parler des activités de la structure, de son organisation décrire et de ses ambitions.
 
 Un deuxième chapitre présente dans une première partie les besoins qui ont donné naissance au projet sur lequel vous avez travaillé et ensuite décrit brièvement les étapes suivies lors de l'exécution du projet ainsi que les méthodes et outils que vous avez utilisés. Il s'agit entre du langage de modélisation\footnote{En licence, UML est généralement utilisé}, du SGBD assurant la persistance des données, du langage programmation et de l'EDI\footnote{Environnement de développement intégré} utilisés. Si vous avez suivi les principes d'une méthodologie de développement logiciel, il est bien de le préciser.
 
 Un dernier chapitre facultatif est consacré à un état de l'art. L'état de l'art présente les travaux effectués par d'autres personnes et qui sont en rapport avec votre projet. Il est presque certain que d'autres avant vous ont eu à travailler sur des sujets similaires. Il existe aussi sur le marché des logiciels qui sont sans doute adaptés au besoin que vous voulez solutionner. Vous devez donc faire un bilan de ces travaux antérieurs et des informations que vous obtenues grâce à eux.
 
 \subsection{Deuxième partie : modélisation UML}
-Cette partie détaille le système que vous avez conçus. Les deux diagrammes mis le plus souvent en avant le diagramme des cas d'utilisation et le diagramme de classes. Les diagrammes de séquence, d'activité, de paquetage et de déploiement doivent aussi être présents. Un ou plusieurs diagrammes d'objets peuvent aussi accompagner le diagramme des classes pour en illustrer certains aspects.
+Cette partie détaille le système que vous avez conçu. Les deux diagrammes mis le plus souvent en avant sont le diagramme des cas d'utilisation et le diagramme de classes. Les diagrammes de séquence, d'activité, de paquetage et de déploiement doivent aussi être présents. Un ou plusieurs diagrammes d'objets peuvent aussi accompagner le diagramme des classes pour en illustrer certains aspects.
 
 Les diagrammes UML sont regroupés suivant trois axes de modélisation.
 
@@ -70,21 +78,21 @@ Vous pouvez donc consacrer un chapitre à chacun des ces axes de modélisation.
 Il s'agira dans ce chapitre de présenter les différents cas d'utilisation identifiés et le diagramme des cas d'utilisation. Ensuite vous devez procéder à la description des cas d'utilisation les plus pertinents de votre système. Il en faut au moins quatre. La description d'un cas d'utilisation peut être accompagnée de l'IHM qui permet sa réalisation.
 
 \subsubsection{Modélisation statique}
-Ce chapitre est en grande partie consacré au diagramme des classes. Avant de présenter ce diagramme, il convient de décrire les différentes classes identifiées en expliquant leur utilisé. Si vous sentez le besoin d'illustrer certains aspects de votre diagramme des classes pour en faciliter la compréhension, vous pouvez avoir recours au diagramme d'objets. Il faudra veiller à présenter également le diagramme de paquetage.
+Ce chapitre est en grande partie consacré au diagramme des classes. Avant de présenter ce diagramme, il convient de décrire les différentes classes identifiées en expliquant leur utilité. Si vous sentez le besoin d'illustrer certains aspects de votre diagramme des classes pour en faciliter la compréhension, vous pouvez avoir recours au diagramme d'objets. Il faudra veiller à présenter également le diagramme de paquetage.
 
 \subsubsection{Modélisation dynamique}
-Vous présentez ici les diagrammes de séquence et d'activité. Il est préférable de présenter les diagramme de séquence des cas d'utilisation que vous avez eu à décrire dans le chapitre consacré à la modélisation fonctionnelle. Le diagrammes d'activité doivent également présenter des fonctionnalités pertinentes du système.
+Vous présentez ici les diagrammes de séquence et d'activité. Il est préférable de présenter les diagrammes de séquence relatifs aux cas d'utilisation que vous avez eu à décrire dans le chapitre consacré à la modélisation fonctionnelle. Les diagrammes d'activité doivent également présenter des fonctionnalités pertinentes du système.
 
 \subsection{Troisième partie : détails pratiques sur la réalisation de l'application}
 Cette partie est consacrée à certains aspects de processus développement d'un logiciel qui ne sont pas abordés par UML. Il s'agit entre autres des mesures prises pour assurer la sécurité du système, les différents profils d'utilisateur \footnote{Aussi bien au niveau de l'application que de la base de données.}, les sauvegardes de la base de données, la création et la gestion des utilisateurs, les procédures de mise à jour de l'application, etc. 
 
-Pour ce qui est du déploiement de l'application, vous pouvez ajouter un diagramme de déploiement pour présenter les différents composant du système.
+Pour ce qui est du déploiement de l'application, vous pouvez ajouter un diagramme de déploiement pour présenter les différents composants du système.
 
 \subsection{Bibliographie et annexes}
-Vous devez présenter une bibliographie claire avec des référencées actualisées. Pour les pages web, il convient d'indiquer les dates de consultation.
+Vous devez présenter une bibliographie claire avec des références actualisées. Pour les pages web, il convient d'indiquer les dates de consultation.
 
-Les annexes sont destinées à toutes les documents et informations complémentaires que vous jugez utiles d'ajouter au mémoire. Il peut s'agir d'extraits de code que vous jugez importants de présenter ou des documents en rapport avec les activités du maître d'ouvrage, comme des factures ou des textes de réglementation.
+Les annexes sont destinées à toutes les documents et informations complémentaires que vous jugez utiles d'ajouter au mémoire. Il peut s'agir d'extraits de code que vous jugez important de présenter ou des documents en rapport avec les activités du maître d'ouvrage, comme des factures ou des textes de réglementation.
 \subsection{Conclusion}
-Vous faites un résumé du travail effectué, et parlez des améliorations à apporter. Vous pouvez également parler des acquis que vous a apportés cette expérience.
+Vous faites un résumé du travail effectué, et parlez des améliorations à apporter. Vous pouvez également parler des acquis que vous a apportés la réalisation du projet présenté dans le mémoire.
 
 \end{document}
